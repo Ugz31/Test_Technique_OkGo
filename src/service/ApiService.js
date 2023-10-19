@@ -1,5 +1,4 @@
 import axios from 'axios'
-// import { users } from './users'
 
 const apiUrl = 'https://test-tech-api.osc-fr1.scalingo.io/api/'
 
