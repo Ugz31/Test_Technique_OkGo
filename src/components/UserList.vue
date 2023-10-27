@@ -14,8 +14,8 @@
           <th>Email</th>
           <th>Adresse</th>
           <th>Actif</th>
+          <!-- Nouvelle Colonne Ajouté -->
           <th>Rôle</th>
-          #Nouvelle Colonne Ajouté
         </tr>
       </thead>
       <tbody>
@@ -25,8 +25,8 @@
           <td>{{ user.email }}</td>
           <td>{{ user.address.line }}, {{ user.address.city }}</td>
           <td>{{ user.isActive | boolean }}</td>
+          <!-- Définition du role -->
           <td>{{ user.role === 'admin' ? 'Administrateur' : 'Utilisateur' }}</td>
-          #Définition du role
         </tr>
       </tbody>
     </table>
