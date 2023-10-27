@@ -18,19 +18,17 @@
       <div>
         <h4>Adresse :</h4>
         <label>Adresse</label>
-        <input v-model="user.adress.line" type="text" required placeholder="123 rue..." />
+        <input v-model="user.address.line" type="text" required placeholder="123 rue..." />
         <label>Code postal</label>
-        <input v-model="user.adress.zipcode" type="text" placeholder="12345" />
+        <input v-model="user.address.zipcode" type="text" placeholder="12345" />
         <label>Ville</label>
-        <input v-model="user.adress.city" type="text" required placeholder="Toulouse" />
+        <input v-model="user.address.city" type="text" required placeholder="Toulouse" />
         <label>Pays</label>
-        <input v-model="user.adress.country" type="text" placeholder="France" />
+        <input v-model="user.address.country" type="text" placeholder="France" />
       </div>
       <div>
-        <select v-model="user.role" required>
-          <option value="admin">Administrateur</option>
-          <option value="user">Utilisateur</option>
-        </select>
+        <label>Mot de passe</label>
+        <input v-model="user.password" type="text" />
       </div>
       <button type="submit">Envoyé</button>
     </form>
@@ -46,14 +44,15 @@ export default {
         name: '',
         firstname: '',
         email: '',
-        adress: {
+        address: {
           line: '',
           zipcode: '',
           city: '',
           country: '',
         },
-        role: '',
-        isActive: true,
+        password: '',
+        role: 'user',
+        isActive: 'true',
       },
     };
   },
