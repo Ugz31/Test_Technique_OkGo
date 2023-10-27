@@ -3,7 +3,7 @@
     <h1 class="title">OKGO CRM</h1>
     <div class="is-flex">
       <h2 class="title">Liste des utilisateurs</h2>
-      <router-link to="" class="button is-info ml-2"> Créer un utilisateur </router-link>
+      <router-link to="/create-user" class="button is-info ml-2"> Créer un utilisateur </router-link>
     </div>
     <div style="max-width: 850px" class="column">
       <div class="filter-section" style="border: 1px solid #e0e0e0; padding: 10px; margin-bottom: 20px; max-width: 100%">
