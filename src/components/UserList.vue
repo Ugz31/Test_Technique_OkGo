@@ -8,7 +8,7 @@
     <div style="max-width: 850px" class="column">
       <div class="filter-section" style="border: 1px solid #e0e0e0; padding: 10px; margin-bottom: 20px; max-width: 100%">
         <h3 class="has-text-weight-bold" style="text-decoration: underline">Filtrer les Users :</h3>
-        <div>
+        <div class="table is-bordered">
           <input v-model="filter.name" placeholder="Nom" />
           <input v-model="filter.firstname" placeholder="Prénom" />
           <input v-model="filter.email" placeholder="Email" />
@@ -50,7 +50,6 @@
         </tbody>
       </table>
     </div>
-    <!-- Div de Filtrage des Utilisateurs/Admin  -->
   </div>
 </template>
 
