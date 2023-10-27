@@ -32,6 +32,7 @@
       </div>
       <button type="submit">Envoyé</button>
     </form>
+    <div v-if="errorMessage" class="notification is-danger">{{ errorMessage }}</div>
   </div>
 </template>
 
@@ -40,6 +41,7 @@ import apiService from '../service/ApiService';
 export default {
   data() {
     return {
+      errorMessage: null,
       user: {
         name: '',
         firstname: '',
@@ -58,11 +60,14 @@ export default {
   },
   methods: {
     async createUser() {
+      this.errorMessage = null;
       try {
         await apiService.postUser(this.user);
         this.$router.push('/users/');
       } catch (error) {
-        console.error("Erreur lors de la création de l'utilisateur:", error);
+        // Je ne suis pas arrivé a gerer les erreurs, dans certain cas j'obtient un objet avec (error) dans d'autre des undifined si je vais chercher la data/message... etc
+        this.errorMessage =
+          "Une erreur est survenue lors de la création de l'utilisateur. Veuillez svp remplir tous les champs, en respectant un mot de passe de 8 caractère avec 1 majuscule/1 minuscule/un symbole/1 chiffre...";
       }
     },
   },
