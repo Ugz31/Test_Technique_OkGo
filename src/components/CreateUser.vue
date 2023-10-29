@@ -82,7 +82,7 @@ export default {
         },
         password: '',
         role: 'user',
-        isActive: 'Oui',
+        isActive: true,
       },
     };
   },
